@@ -7,8 +7,10 @@
 			$(document).ready(function() {
                 let message = "Elegantly unscramble this message using the space provided. Then write the scrambler that made it. The answer is an object with global scope that can scramble and unscramble any text any number of times.";
 
-                console.log(scrambler.scramble)
+                scrambler.scramble(message);
 
+                $('#scramble').click(() => scrambler.scramble(message));
+                $('#unscramble').click(() => scrambler.unscramble());
 			});
 		</script>
 		<style>
@@ -19,7 +21,12 @@
     </head>
 
     <body style="">
+        <h1>Fuzzy Scrambler</h1>
+        <h3>You are given a jumbled mess of code that looks like this cat had its way with it.</h3>
+        <img src="typingkitty.gif">
+        <p>Elegantly unscramble this message using the space provided. Then write the scrambler that made it. The answer is an object with global scope that can scramble and unscramble any text any number of times.</p>
         <button id="scramble">Scramble</button>
         <button id="unscramble">Unscramble</button>
+        <div id="scrambler"></div>
     </body>
 </html>

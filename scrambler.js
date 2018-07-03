@@ -1,8 +1,7 @@
 const scrambler = {
     scramble: (message) => {
-        $('#scrambler').empty();
-
         message = message.split('');
+
         let uniqueString = '0123456789Evy}JTj@Nt:xU&amp;YKHcFZOXlns%oCi#W$r)p*^MfqbReDg{kwA!QPLBhazmduI(?VG S.';
 		let insertHidden = [];
         let result = `<span hidden>${message.shift()}</span>`;
@@ -44,6 +43,7 @@ const scrambler = {
                 message += span.innerHTML;
             }
         });
-        document.write(message);
+        // document.write(message);
+        $('#scrambler').html(message);
     }
 };

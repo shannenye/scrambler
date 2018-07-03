@@ -27,6 +27,8 @@ const scrambler = {
                         message.shift();
                         insertHidden.shift();
                     }
+                } else if (!message[0]) {
+                    break;
                 }
                 result += `<span>${randomChar}</span>`;
             }
